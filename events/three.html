@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Move your mouse and see screen and client X and Y </h3>
+    <p id="user"></p>
+
+    <script>
+        const result = document.querySelector('#user')
+
+        document.addEventListener('mousemove', function(e){
+            result.innerHTML = `
+            screen X/Y : ${e.pageX}, ${e.pageY}<br>
+            client X/Y : ${e.clientX}, ${e.clientY}
+            `
+        })
+    </script>
+</body>
+</html>

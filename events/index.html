@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events</title>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="images">
+            <li><img src="innova.webp" id="innova"></li>
+            <li><img src="jaipur.jpg" id="jaipur"></li>
+            <li><img src="pani.jpg" id="pani"></li>
+            <li><img src="ranthombar.jpg" id="ranthombar"></li>
+            <li><a href="https://www.google.co.uk/">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    const images = document.querySelector('.images')
+    // // console.log(images);
+    // images.addEventListener('click', function(e){
+    //     // console.log('click outside')
+    // }, false)
+    // // const pani = document.querySelector('#pani')
+    // // console.log(pani);
+    // pani.addEventListener('click', function(e){
+    //     e.stopPropagation()
+    //     // console.log("click on pani");
+        
+    // },false)
+
+    images.addEventListener('click', function(e){
+        console.log(e);
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        // console.log(e.target.tagName);
+
+        // const removeIt = e.target.parentNode;
+        // removeIt.remove()
+        
+        if(e.target.tagName === 'IMG'){
+            const removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+        
+        
+    }, false)
+    
+
+    
+</script>
+</html>

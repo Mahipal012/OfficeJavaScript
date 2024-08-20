@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" oninput="uppercase()" id="name"> -->
+    <!-- <h1 onmouseover="mouseOn()" onmouseout="mouseOut()"> hover on it</h1> -->
+    <!-- <img src="jaipur.jpg" alt="" id="image" onmousedown="jaipur()" onmouseup="pani()" onclick="change()"> -->
+    <p>
+        Focus this iframe and press any key to get the current timestamp for the
+        keypress event.
+      </p>
+      <p>timeStamp: <span id="time">-</span></p>
+    
+</body>
+<script>
+
+    function getTime(event) {
+        const time = document.getElementById("time")
+        
+        
+        time.firstChild.nodeValue = event.timeStamp;
+    }
+    document.body.addEventListener("keypress", getTime)
+    
+//     function getTime(event) {
+//   const time = document.getElementById("time");
+//   time.firstChild.nodeValue = event.timeStamp;
+// }
+// document.body.addEventListener("keypress", getTime);
+    
+    // const img = document.getElementById('image')
+    // const body1 = document.querySelector('body')
+    // function change(){
+    //     body1.style.backgroundImage= "pani.jpg"
+        
+    // }
+    // function change(){
+    //     img.src = "pani.jpg"
+    // }
+
+    // function jaipur(){
+    //     img.src ="pani.jpg";
+    // }
+    // function pani(){
+    //     img.src = "jaipur.jpg"
+    // }
+// const h1 = document.querySelector('h1')
+// function mouseOn(){
+// h1.innerHTML = "mouse hover on me"
+// }
+
+// function mouseOut(){
+// h1.innerHTML = "hover on it"
+// }
+// function uppercase(){
+// let name = document.querySelector('#name')
+// // console.log(name);
+
+// name.value = name.value.toUpperCase();
+// }
+// uppercase()
+</script>
+
+</html>
