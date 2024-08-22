@@ -16,9 +16,17 @@
         keypress event.
       </p>
       <p>timeStamp: <span id="time">-</span></p>
+      <p id="ctrl">ctrl key press : false</p>
     
 </body>
 <script>
+
+    const p = document.querySelector('#ctrl')
+
+    window.addEventListener('mousemove', function(e){
+        // p.innerHTML = `ctrl key press : ${e.ctrlKey}`
+        p.innerHTML = `shift key press : ${e.shiftKey}`
+    })
 
     function getTime(event) {
         const time = document.getElementById("time")
