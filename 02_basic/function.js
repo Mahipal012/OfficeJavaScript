@@ -50,8 +50,8 @@
 
 
 // function takePrice(...price) {
-//     let calculate = price
-//     let count = calculate.reduce((total, price) => total + price)
+     
+//     let count = price.reduce((total, price) => total + price)
 //     console.log(count);
 
 
@@ -99,7 +99,7 @@
 // const arro = (num) =>(num + num) arrow function
 // console.log(arro(7));
 
-(function hello() {
-    console.log("hello");
+// (function hello() {
+//     console.log("hello");
     
-}) 
+// }) 
